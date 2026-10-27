@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Event" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorAccent">#245B4F</item>
+    </style>
+</resources>
