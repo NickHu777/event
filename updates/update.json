@@ -1,7 +1,7 @@
 {
   "versionCode": 1,
   "versionName": "1.0",
-  "apkUrl": "https://gitee.com/doggy-original-licensing/event/raw/main/updates/event-1.0.apk",
+  "apkUrl": "https://github.com/NickHu777/event/releases/download/v1.0/event-1.0.apk",
   "sha256": "ffe3e31e74d0abed216c6fc879d0d40eb656fdb161579bb1b1c6df2fd584b696",
   "changelog": "event 首个可检查更新版本"
 }

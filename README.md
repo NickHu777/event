@@ -16,19 +16,19 @@ From PowerShell in the repository folder, run:
 
 The script increments `versionCode`, sets `versionName`, builds a debug APK with the local Android debug signing key, copies it to `dist/`, calculates its SHA-256, and writes a draft manifest to `dist/update.json`. It does not upload or publish anything.
 
-## Gitee in-app updates
+## GitHub in-app updates
 
-The app reads `updates/update.json` from the public `main` branch, downloads the APK, verifies its SHA-256, and then opens Android's package installer.
+The app reads `updates/update.json` from the public `main` branch at `raw.githubusercontent.com`, downloads the APK from a GitHub Release, verifies its SHA-256, and then opens Android's package installer. The repository must be public so the app can download updates without a GitHub login.
 
 When publishing an update:
 
 1. Run the local packaging script above.
-2. Upload `dist/event-<version>.apk` as an attachment to a public Gitee Release. Use a tag such as `v1.1`.
+2. Create a public GitHub Release with a tag such as `v1.1` and upload `dist/event-<version>.apk` as its attachment.
 3. Put the Release attachment's HTTPS download URL into the `apkUrl` field in `dist/update.json`.
 4. Copy the completed draft to `updates/update.json`, then merge/push that manifest to `main`.
 5. On the phone, open **Settings → App updates → Check for updates**.
 
-Do not put APKs in the repository's raw file URL: Gitee may require login to download them. Release attachments are intended for software downloads and support files up to 100 MB each. Keep the signing key backed up and unchanged so Android can install updates over the current app. `.keystore` and `.jks` files are ignored by Git. Event data remains on the phone and is not uploaded.
+Do not put future APKs in the repository; use Release attachments. Keep the signing key backed up and unchanged so Android can install updates over the current app. `.keystore` and `.jks` files are ignored by Git. Event data remains on the phone and is not uploaded.
 
 ## Data migration
 

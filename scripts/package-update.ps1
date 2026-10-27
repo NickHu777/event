@@ -97,4 +97,4 @@ Write-Host "Built APK: $apkFile"
 Write-Host "Version: $VersionName (versionCode $nextVersionCode)"
 Write-Host "SHA-256: $sha256"
 Write-Host "Manifest draft: $manifestDraftFile"
-Write-Host 'Next: upload the APK as a Gitee Release attachment, fill apkUrl in the draft, then copy it to updates/update.json and publish that change on main.'
+Write-Host 'Next: upload the APK as a GitHub Release attachment, fill apkUrl in the draft, then copy it to updates/update.json and publish that change on main.'

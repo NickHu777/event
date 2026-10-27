@@ -20,15 +20,15 @@ data class UpdateInfo(
 )
 
 /**
- * Gitee-hosted update feed. Set this to the public raw URL of update.json once the repository exists.
+ * GitHub-hosted update feed. The repository must stay public so the app can fetch it without login.
  * The feed and APK must use HTTPS. APK bytes are checked against the SHA-256 in the feed before install.
  */
 object UpdateClient {
-    const val MANIFEST_URL = "https://gitee.com/doggy-original-licensing/event/raw/main/updates/update.json"
+    const val MANIFEST_URL = "https://raw.githubusercontent.com/NickHu777/event/main/updates/update.json"
     private const val MAX_APK_BYTES = 150L * 1024L * 1024L
 
     fun fetchUpdateInfo(): UpdateInfo {
-        require(MANIFEST_URL.startsWith("https://")) { "Gitee 更新清单地址尚未配置" }
+        require(MANIFEST_URL.startsWith("https://")) { "GitHub 更新清单地址尚未配置" }
         val connection = (URL(MANIFEST_URL).openConnection() as HttpURLConnection).apply {
             connectTimeout = 15_000
             readTimeout = 20_000
