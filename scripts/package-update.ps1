@@ -36,13 +36,13 @@ else {
     $updatedGradle = [regex]::Replace(
         $originalGradle,
         $versionCodePattern,
-        ('$1' + $nextVersionCode + '$3'),
+        ('${1}' + $nextVersionCode + '${3}'),
         1
     )
     $updatedGradle = [regex]::Replace(
         $updatedGradle,
         $versionNamePattern,
-        ('$1"' + $VersionName + '"$3'),
+        ('${1}"' + $VersionName + '"${3}'),
         1
     )
 }
