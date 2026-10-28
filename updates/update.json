@@ -1,7 +1,7 @@
 {
-  "versionCode": 2,
-  "versionName": "1.1",
-  "apkUrl": "https://github.com/NickHu777/event/releases/download/v1.1/event-1.1.apk",
-  "sha256": "1216c6ea7438a91cdc88295e7720e6a0f3eddfb63885d05ff32f04f3559df8e4",
-  "changelog": "更新来源迁移到 GitHub，后续版本可在应用内检查更新。"
+  "versionCode": 3,
+  "versionName": "1.2",
+  "apkUrl": "https://github.com/NickHu777/event/releases/download/v1.2/event-1.2.apk",
+  "sha256": "1248858f0058bd5d26a0ad302f4ec2d09ee076757578df2ed08567ea74a9085a",
+  "changelog": "图标主色调调整为蓝色，优化图标配色和桌面显示。"
 }
